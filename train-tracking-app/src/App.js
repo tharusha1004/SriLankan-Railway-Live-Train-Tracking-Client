@@ -1,22 +1,32 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SelectionPage from './Pages/UserSelectionPage';
-import LoginPage from './Pages/Auth/LoginPage';
-import RegisterPage from './Pages/Auth/RegisterPage';
-import AdminDashboard from './Pages/AdminDashboard';
-import UserDashboard from './Pages/UserDashboard';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import UserSelection from './components/Auth/UserSelection';
+import AdminLogin from './components/Auth/AdminLogin';
+import UserLogin from './components/Auth/UserLogin';
+import UserRegister from './components/Auth/UserRegister';
+import AdminDashboard from './components/Admin/AdminDashboard';
+import UserDashboard from './components/User/UserDashboard';
+import TrainDetailsPage from './components/Admin/TrainDetailsPage';
+import ScheduleDetailsPage from './components/Admin/ScheduleDetailsPage';
+import TrainLocationPage from './components/Admin/TrainLocationPage';
+import EngineStatusPage from './components/Admin/EngineStatusPage';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/" element={<SelectionPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/" element={<UserSelection />} />
+        <Route path="/admin-login" element={<AdminLogin />} />
+        <Route path="/user-login" element={<UserLogin />} />
+        <Route path="/user-register" element={<UserRegister />} />
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
         <Route path="/user-dashboard" element={<UserDashboard />} />
+        <Route path="/admin/train-details" element={<TrainDetailsPage />} />
+        <Route path="/admin/train-schedules" element={<ScheduleDetailsPage />} />
+        <Route path="/admin/train-live-location" element={<TrainLocationPage/>} />
+        <Route path="/admin/engine-status" element={<EngineStatusPage/>} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 

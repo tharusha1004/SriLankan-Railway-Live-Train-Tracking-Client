@@ -1,0 +1,76 @@
+.dashboard-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.dashboard-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.select-train-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.train-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.train-button {
+  padding: 10px 20px;
+  border: 2px solid #2980b9;
+  background-color: #fff;
+  color: #2980b9;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.train-button:hover, .train-button.selected {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+.details-container {
+  margin-top: 30px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #2980b9;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.details-card {
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.schedules-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.schedule-item {
+  padding: 5px 0;
+  font-size: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.schedule-item:last-child {
+  border-bottom: none;
+}
